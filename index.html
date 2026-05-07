@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Μου λείπεις...</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Great+Vibes&family=Dancing+Script:wght@400;700&display=swap');
+        /* Modern & elegant font stack */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Caveat:wght@400;500;600;700&family=Quicksand:wght@300;400;600&display=swap');
         
         * {
             margin: 0;
@@ -14,7 +15,7 @@
         }
         
         body {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Montserrat', 'Quicksand', sans-serif;
             height: 100vh;
             overflow: hidden;
             background: linear-gradient(135deg, #2c0a1f, #4a1b3d, #6b2d5e, #9b4f7f);
@@ -94,22 +95,25 @@
             z-index: 20;
         }
         
+        /* MODERN TYPOGRAPHY: Clean, warm, elegant script for the message */
         .message {
             text-align: center;
-            font-family: 'Great Vibes', cursive;
-            font-size: clamp(2.4rem, 8.5vw, 3.4rem);
-            font-weight: 400;
-            line-height: 1.05;
+            font-family: 'Caveat', 'Great Vibes', cursive;
+            font-size: clamp(2.5rem, 9vw, 3.8rem);
+            font-weight: 700;
+            line-height: 1.1;
             margin-top: 15px;
-            margin-left: 45px;           /* ← Μετακινήθηκε δεξιά */
-            background: linear-gradient(90deg, #ff9a9e, #ffe4e1, #ff9a9e);
+            margin-left: 45px;           /* Same positioning */
+            background: linear-gradient(135deg, #FFF5E1, #FFDAB9, #FFB7C5, #FFE4E1);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
             text-shadow: 
-                0 0 25px rgba(255, 105, 180, 0.9),
-                0 0 50px rgba(255, 20, 147, 0.6);
+                0 0 20px rgba(255, 140, 170, 0.8),
+                0 0 40px rgba(255, 80, 120, 0.5);
             animation: pulseText 4s ease-in-out infinite;
-            letter-spacing: -1.5px;
+            letter-spacing: -0.5px;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
         }
         
         @keyframes floatFrame {
@@ -123,8 +127,8 @@
         }
         
         @keyframes pulseText {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.93; }
+            0%, 100% { opacity: 1; text-shadow: 0 0 20px rgba(255, 140, 170, 0.8), 0 0 40px rgba(255, 80, 120, 0.5); }
+            50% { opacity: 0.95; text-shadow: 0 0 30px rgba(255, 180, 200, 1), 0 0 55px rgba(255, 105, 150, 0.8); }
         }
         
         /* Canvas Hearts */
@@ -152,7 +156,6 @@
         <!-- Teddy Bear -->
         <div class="teddy">
             <svg width="165" height="185" viewBox="0 0 160 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <!-- Same teddy SVG as before (kept for brevity) -->
                 <ellipse cx="80" cy="125" rx="48" ry="52" fill="#8B5A2B"/>
                 <circle cx="80" cy="68" r="38" fill="#8B5A2B"/>
                 <circle cx="50" cy="42" r="18" fill="#8B5A2B"/>
